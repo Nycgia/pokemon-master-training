@@ -1,0 +1,16 @@
+.training-main-box {
+    width: 80vw;
+    max-width: 100vw;
+    height: 200px;
+    margin: auto;
+    background-color: #E1E2E1;
+    padding: 0 10vw;
+    display: flex;
+    justify-content: center;
+}
+
+.training-main-box__text {
+    font-weight: bold;
+    margin: auto;
+    font-size: 25px;
+}

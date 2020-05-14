@@ -1,8 +1,16 @@
 import React from 'react';
+import '../assets/styles/containers/SelectionTraining.css';
 
 const SelectionTraining = () => {
     return (
-        <h1>Selection Training</h1>
+        <>
+            <div className="training-main-box">
+                <span className="training-main-box__text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Officia, fugiat porro sint mollitia excepturi nam.
+                </span>
+            </div>
+        </>
     );
 }
 
