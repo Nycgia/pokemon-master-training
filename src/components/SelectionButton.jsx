@@ -4,7 +4,7 @@ import '../assets/styles/components/SelectionButton.css';
 const SelectionButton = ({id, label, img}) => {
     return (
         <div className="selection-button">
-            Lorem ipsum dolor sit amet.
+            <img src={img} alt={label} />
         </div>
     );
 };

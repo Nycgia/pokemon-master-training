@@ -1,23 +1,26 @@
 import React from 'react';
 import SelectionButtons from './SelectionButtons';
 import '../assets/styles/containers/SelectionTraining.css';
+import pokeball from '../assets/images/pokeball.png';
+import superball from '../assets/images/superball.png';
+import ultraball from '../assets/images/ultraball.png';
 
 const SelectionTraining = () => {
     const buttons = [
         {
             id: 1,
-            label: 'label1',
-            img: 'img1.png',
+            label: 'Pokeball',
+            img: pokeball,
         },
         {
             id: 2,
-            label: 'label2',
-            img: 'img2.png',
+            label: 'Superball',
+            img: superball,
         },
         {
             id: 3,
-            label: 'label3',
-            img: 'img3.png',
+            label: 'Ultraball',
+            img: ultraball,
         },
     ];
 
