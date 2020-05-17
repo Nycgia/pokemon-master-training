@@ -12,7 +12,15 @@
     width: 100px;
     height: 100px;
     padding: 10px 10px;
+}
+
+.selection-button__not-selected {
     filter: grayscale(100%);
+    transition:0.5s all;
+}
+
+.selection-button__selected {
+    filter: grayscale(0%);
     transition:0.5s all;
 }
 

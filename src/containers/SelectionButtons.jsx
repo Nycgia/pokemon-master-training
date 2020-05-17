@@ -1,10 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import SelectionButton from '../components/SelectionButton';
 import '../assets/styles/containers/SelectionButtons.css';
 
-const SelectionButtons = (props) => {
-    const buttons = props.buttons;
-
+const SelectionButtons = ({buttons}) => {
     return (
         <div className="selection-buttons">
             {buttons.map((value, index) => {
@@ -14,4 +13,8 @@ const SelectionButtons = (props) => {
     );
 };
 
-export default SelectionButtons;
+const mapStateToProps = state => ({
+    "buttons": state.pokeballs
+});
+
+export default connect(mapStateToProps, null)(SelectionButtons);
