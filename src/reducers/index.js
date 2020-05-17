@@ -5,6 +5,16 @@ const reducer = (state, action) => {
                 ...state,
                 "pokeballSelected": state.pokeballs.find(item => item.id === Number(action.payload))
             }
+        case 'SET_POKEBALL_HOVER':
+            return {
+                ...state,
+                "pokeballHover": state.pokeballs.find(item => item.id === Number(action.payload))
+            }
+        case 'CLEAR_POKEBALL_HOVER':
+            return {
+                ...state,
+                "pokeballHover": null,
+            }
         default:
             return state;
     }
