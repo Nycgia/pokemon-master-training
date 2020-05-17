@@ -8,9 +8,9 @@ const SelectionTraining = ({ pokeball }) => {
         <>
             <div className="training-main-box">
                 <span className="training-main-box__text">
-                    {(pokeball) 
+                    {(pokeball)
                     ? `You are selected the '${pokeball.label}'!`
-                    : `Select a pokeball`
+                    : `Choose one`
                 }
                 </span>
             </div>

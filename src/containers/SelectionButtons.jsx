@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import SelectionButton from '../components/SelectionButton';
 import '../assets/styles/containers/SelectionButtons.css';
 
-const SelectionButtons = ({buttons}) => {
+const SelectionButtons = ({ buttons }) => {
     return (
         <div className="selection-buttons">
             {buttons.map((value, index) => {
@@ -14,7 +14,7 @@ const SelectionButtons = ({buttons}) => {
 };
 
 const mapStateToProps = state => ({
-    "buttons": state.pokeballs
+    buttons: state.pokeballs
 });
 
 export default connect(mapStateToProps, null)(SelectionButtons);
