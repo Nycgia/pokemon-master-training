@@ -8,7 +8,7 @@ import initialState from '../storage';
 import '../assets/styles/App.css';
 
 // Components
-import SelectionTraining from '../containers/SelectionTraining';
+import SelectionDifficult from '../containers/SelectionDifficult';
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(reducer, initialState(), composeEnhancer());
@@ -19,7 +19,8 @@ const App = () => {
             <BrowserRouter>
                 <Navbar />
                 <Switch>
-                    <Route exact path="/" component={SelectionTraining} />
+                    <Route exact path="/" component={SelectionDifficult} />
+                    <Route exact path="/training/difficult" component={SelectionDifficult} />
                 </Switch>
             </BrowserRouter>
         </Provider>

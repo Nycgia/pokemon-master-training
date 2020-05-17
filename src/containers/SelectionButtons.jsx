@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import SelectionButton from '../components/SelectionButton';
 import '../assets/styles/containers/SelectionButtons.css';
 
@@ -13,8 +12,4 @@ const SelectionButtons = ({ buttons }) => {
     );
 };
 
-const mapStateToProps = state => ({
-    buttons: state.pokeballs
-});
-
-export default connect(mapStateToProps, null)(SelectionButtons);
+export default SelectionButtons
