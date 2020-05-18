@@ -9,7 +9,7 @@ const SelectionDifficult = ({ pokeballSelected, pokeballs, hover }) => {
     if (hover) {
         text = hover.description;
     } else if (pokeballSelected) {
-        text = `You are selected the '${pokeballSelected.label}'!`;
+        text = `You have selected the '${pokeballSelected.label}'!`;
     }
 
     return (
