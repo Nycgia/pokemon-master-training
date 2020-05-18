@@ -6,7 +6,14 @@ const SelectionButtons = ({ buttons }) => {
     return (
         <div className="selection-buttons">
             {buttons.map((value, index) => {
-                return <SelectionButton key={index} id={value.id} label={value.label} img={value.img} />
+                return (
+                    <SelectionButton 
+                        key={index}
+                        id={value.id}
+                        label={value.label}
+                        img={value.img}
+                    />
+                )
             })}
         </div>
     );
