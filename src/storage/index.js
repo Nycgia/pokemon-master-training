@@ -28,6 +28,8 @@ const initialState = () => ({
             description: 'Advanced training, if you hesitate, you better not even try.',
         },
     ],
+    "trainingSelected": null,
+    "trainingHover": null,
     "trainingTypes": [
         {
             id: 1,

@@ -1,29 +1,56 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { selectPokeball, setPokeballHover, clearPokeballHover } from '../actions';
 import SelectionButtons from './SelectionButtons';
 import TrainingMainBox from '../components/TrainingMainBox';
 
-const SelectionDifficult = ({ pokeballSelected, pokeballs, hover }) => {
+const SelectionDifficult = props => {
+    const { selected, pokeballs, hover,  selectPokeball, setPokeballHover, clearPokeballHover } = props;
+
+    const handleClick = value => {
+        selectPokeball(value);
+        clearPokeballHover();
+    };
+
+    const handleMouseEnter = value => {
+        setPokeballHover(value);
+    };
+
+    const handleMouseLeave = () => {
+        clearPokeballHover();
+    };
+
     let text = 'Choose one';
 
     if (hover) {
         text = hover.description;
-    } else if (pokeballSelected) {
-        text = `You have selected the '${pokeballSelected.label}'!`;
+    } else if (selected) {
+        text = `You have selected the '${selected.label}'!`;
     }
 
     return (
         <>
             <TrainingMainBox text={text} />
-            <SelectionButtons buttons={pokeballs}/>
+            <SelectionButtons 
+                buttons={pokeballs}
+                handleClick={handleClick}
+                handleMouseEnter={handleMouseEnter}
+                handleMouseLeave={handleMouseLeave}
+            />
         </>
     );
 }
 
 const mapStateToProps = state => ({
-    pokeballSelected: state.pokeballSelected,
+    selected: state.pokeballSelected,
     hover: state.pokeballHover,
     pokeballs: state.pokeballs,
 });
 
-export default connect(mapStateToProps, null)(SelectionDifficult);
+const mapDispatchToProps = {
+    selectPokeball,
+    setPokeballHover,
+    clearPokeballHover
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(SelectionDifficult);

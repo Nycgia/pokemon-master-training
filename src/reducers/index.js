@@ -15,6 +15,21 @@ const reducer = (state, action) => {
                 ...state,
                 "pokeballHover": null,
             }
+        case 'SELECT_TYPE':
+            return {
+                ...state,
+                "trainingSelected": state.trainingTypes.find(item => item.id === Number(action.payload))
+            }
+        case 'SET_TYPE_HOVER':
+            return {
+                ...state,
+                "trainingHover": state.trainingTypes.find(item => item.id === Number(action.payload))
+            }
+        case 'CLEAR_TYPE_HOVER':
+            return {
+                ...state,
+                "trainingHover": null,
+            }
         default:
             return state;
     }

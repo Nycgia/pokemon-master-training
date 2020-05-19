@@ -1,9 +1,7 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { selectPokeball, setPokeballHover, clearPokeballHover} from '../actions';
 import '../assets/styles/components/SelectionButton.css';
 
-const SelectionButton = (props) => {
+const SelectionButton = props => {
     const classSelected = 'selection-button__selected';
     const classNotSelected = 'selection-button__not-selected';
 
@@ -22,15 +20,14 @@ const SelectionButton = (props) => {
         const target = event.target;
         if (target.attributes && target.attributes.id) {
             modClass(target);
-            props.selectPokeball(target.attributes.id.value);
-            props.clearPokeballHover();
+            props.handleClick(target.attributes.id.value);
         }
     };
 
     const handleMouseEnter = event => {
         const target = event.target;
         if (target.attributes && target.attributes.id) {
-            props.setPokeballHover(target.attributes.id.value);
+            props.handleMouseEnter(target.attributes.id.value);
         }
     };
 
@@ -43,16 +40,10 @@ const SelectionButton = (props) => {
                  id={props.id}
                  onClick={handleClick}
                  onMouseOver={handleMouseEnter}
-                 onMouseLeave={props.clearPokeballHover}
+                 onMouseLeave={props.handleMouseLeave}
             />
         </div>
     );
 };
 
-const mapDispatchToProps = {
-    selectPokeball,
-    setPokeballHover,
-    clearPokeballHover
-};
-
-export default connect(null, mapDispatchToProps)(SelectionButton);
+export default SelectionButton;
