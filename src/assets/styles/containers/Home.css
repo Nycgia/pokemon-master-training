@@ -1,0 +1,28 @@
+.home {
+    display: grid;
+    grid-template-columns: 70vw 30vw;
+    grid-template-rows: 89.5vh;
+}
+
+.home section article {
+    min-height: 33.3%;
+    background-color: red;
+    border: solid 1px #000;
+}
+
+.home aside div {
+    min-height: 44.7vh;
+    background-color: lightblue;
+    border: solid 1px #000;
+}
+
+@media screen and (max-width: 800px) {
+    .home {
+        grid-template-columns: 100vw;
+        grid-template-rows: 89.5vh;
+    }
+
+    .home aside div {
+        display: none;
+    }
+}
