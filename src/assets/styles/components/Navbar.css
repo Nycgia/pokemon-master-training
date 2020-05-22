@@ -17,9 +17,10 @@
     padding-left: 5px;
     padding-right: 5px;
     width: 50px;
+    z-index: 99;
 }
 
-.navbar .navbar-logo .navbar-logo__title{
+.navbar .navbar-logo .navbar-logo__title {
     font-size: 16px;
     color: #FFF;
 }

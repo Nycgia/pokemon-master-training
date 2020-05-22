@@ -4,16 +4,13 @@
     grid-template-rows: 89.5vh;
 }
 
-.home section article {
-    min-height: 33.3%;
-    background-color: red;
-    border: solid 1px #000;
+.home aside div {
+    min-height: 45vh;
+    background-color: lightblue;
 }
 
-.home aside div {
-    min-height: 44.7vh;
-    background-color: lightblue;
-    border: solid 1px #000;
+.home aside div:nth-child(2n) {
+    background-color: #c99;
 }
 
 @media screen and (max-width: 800px) {
