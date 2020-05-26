@@ -9,6 +9,10 @@
     background-color: lightblue;
 }
 
+.home aside {
+    z-index: 99;
+}
+
 .home aside div:nth-child(2n) {
     background-color: #c99;
 }
